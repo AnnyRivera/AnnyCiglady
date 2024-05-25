@@ -58,13 +58,20 @@
                                 <div class="g-recaptcha" data-sitekey="6LeIbOcpAAAAAL2GtdwC9JRMiVy6elRZkLhp3lCY"></div>
                             </div>
 
-                            <button type="button" class="btn btn-primary mt-3" onclick="validateForm()">Register</button>
+                            <button type="button" class="btn btn-primary mt-3" onclick="validateForm()">Crear Cuenta</button>
+                            <button type="button" class="btn btn-primary mt-3" onclick="redirectToLogin()">Iniciar Sesión</button>
+
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+    function redirectToLogin() {
+    window.location.href = 'login.html';
+}
+    </script>
 
     <script>
         function validateForm() {
@@ -73,6 +80,9 @@
             var password = document.getElementById('password').value;
             var confirmPassword = document.getElementById('confirm-password').value;
             var recaptchaResponse = grecaptcha.getResponse();
+
+ 
+
 
             if (username === '' || email === '' || password === '' || confirmPassword === '') {
                 Swal.fire({

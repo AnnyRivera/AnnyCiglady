@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7; /* Fondo gris claro */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+    text-align: center;
+    color: #000; /* Texto negro */
+}
+
+h1 {
+    font-size: 36px;
+    color: #fc5d35; /* Naranja */
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    margin-top: 20px;
+}

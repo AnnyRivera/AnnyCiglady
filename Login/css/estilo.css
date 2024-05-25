@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header input {
+    margin-top: 10px;
+    padding: 10px;
+    width: 50%;
+}
+
+.custom_nav-container {
+    z-index: 99999;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2e2e2d;
+}
+
+.navbar-brand span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2e2e2d;
+}
+
+.layout_padding {
+    padding: 75px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: calc(33.333% - 40px);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: #fff;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    margin: 0 0 10px;
+}
+
+.product-card p {
+    margin: 0 0 15px;
+}
+
+.product-card button {
+    padding: 10px;
+    background-color: #fc5d35;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.product-card button:hover {
+    border: 1px solid #fc5d35;
+    color: #fc5d35;
+    background-color: transparent;
+}
+
+aside {
+    width: 25%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: #fff;
+}
+
+aside h2 {
+    margin-top: 0;
+}
+
+#cartItems {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cartItems li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#cartItems li:last-child {
+    border-bottom: none;
+}
+
+aside button {
+    padding: 10px;
+    background-color: #fc5d35;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+aside button:hover {
+    border: 1px solid #fc5d35;
+    color: #fc5d35;
+    background-color: transparent;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.payment-method {
+    display: block;
+    margin: 10px 0;
+}
+
+#cardDetails {
+    margin-top: 15px;
+}
+
+#cardDetails label,
+#cardDetails input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#cardDetails input {
+    padding: 8px;
+    width: calc(100% - 16px);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.receipt {
+    display: none;
+    text-align: center;
+}
+
+.receipt h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.receipt ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.receipt ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.receipt ul li:last-child {
+    border-bottom: none;
+}
+
+.receipt p {
+    font-size: 18px;
+    font-weight: bold;
+}

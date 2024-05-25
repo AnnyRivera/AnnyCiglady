@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script type="text/javascript">
+        (function () {
+            var ldk = document.createElement('script');
+            ldk.type = 'text/javascript';
+            ldk.async = true;
+            ldk.src = 'https://s.cliengo.com/weboptimizer/66513899de07284f7ec010e1/66513e8a81b975187ed9687b.js?platform=onboarding_modular';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ldk, s);
+        })();
+    </script>
+</head>
+<body>
+    <header class="custom_nav-container">
+        <div class="container-fluid">
+            <div class="nav_container">
+                <nav><button class="custom_orange-btn" onclick="logout()">Cerrar Sesión</button></nav>
+                <h1 class="navbar-brand">
+                    <span>Tienda en Línea</span>
+                </h1>
+                <input type="text" id="searchInput" placeholder="Buscar productos..." onkeyup="searchProducts()">
+                
+            </div>
+        </div>
+    </header>
+
+    <main class="layout_padding">
+        <div class="product-list" id="productList">
+            <!-- Productos serán insertados dinámicamente aquí -->
+        </div>
+    </main>
+
+    <aside class="layout_padding2">
+        <h2 class="custom_heading">Carrito de Compras</h2>
+        <ul id="cartItems" class="custom_heading-text">
+            <!-- Elementos del carrito serán insertados dinámicamente aquí -->
+        </ul>
+        <button class="custom_orange-btn" onclick="checkout()">Pagar</button>
+    </aside>
+
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Selecciona Método de Pago</h2>
+            <form id="paymentForm">
+                <label class="payment-method">
+                    <input type="radio" name="paymentMethod" value="tarjeta" required> Tarjeta
+                </label>
+                <label class="payment-method">
+                    <input type="radio" name="paymentMethod" value="efectivo" required> Efectivo
+                </label>
+                <div id="cardDetails" style="display: none;">
+                    <label for="cardNumber">Número de Tarjeta:</label>
+                    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234-5678-9012-3456">
+                    <label for="cardExpiry">Fecha de Expiración:</label>
+                    <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/AA">
+                    <label for="cardCVC">CVv:</label>
+                    <input type="text" id="cardCVC" name="cardCVC" placeholder="CVC">
+                </div>
+                <button type="submit" class="custom_orange-btn">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="receipt" class="receipt">
+        <h2>Recibo</h2>
+        <ul id="receiptItems">
+            <!-- Elementos del recibo serán insertados dinámicamente aquí -->
+        </ul>
+        <p id="totalAmount"></p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
