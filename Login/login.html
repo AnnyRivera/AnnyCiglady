@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Login C&A</title>
+  </head>
+  <!-- Código de instalación Cliengo para https://github.com/AnnyRivera/AnnyCiglady/blob/main/Login/index.html --> <script type="text/javascript">(function () { var ldk = document.createElement('script'); ldk.type = 'text/javascript'; ldk.async = true; ldk.src = 'https://s.cliengo.com/weboptimizer/66513899de07284f7ec010e1/66513e8a81b975187ed9687b.js?platform=onboarding_modular'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s); })();</script>
+  <body>
+  
+
+  <div class="d-lg-flex half">
+    <div class="bg order-1 order-md-2" style="background-image: url('images/bg_1.jpg');"></div>
+    <div class="contents order-2 order-md-1">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7">
+            <h3>Bienveido a  <strong>C&A</strong></h3>
+            <p class="mb-4">Somos la mejor opción para surtir tu despensa en línea .</p>
+            <form id="login-form" action="validacion.php" method="POST" onsubmit="return validateForm()">
+              <label for="email">Email:</label>
+              <input  class="form-control" type="email" id="email" name="email" required>
+              <label for="password">Password:</label>
+              <input  class="form-control" type="password" id="password" name="password" required>
+              <div class="captcha">
+                  <div class="g-recaptcha" data-sitekey="6LeIbOcpAAAAAL2GtdwC9JRMiVy6elRZkLhp3lCY"></div>
+              </div>
+              <br>
+              <input type="submit" value="Log In" class="btn btn-block btn-primary">
+             <center> <br><a href="forgot_password.php">Olvidé mi contraseña</a></center>
+          </form>
+      </main>
+      <footer>
+          <p>&copy; 2024 My Website</p>
+      </footer>
+      <script>
+          function validateForm() {
+              const email = document.getElementById('email').value;
+              const password = document.getElementById('password').value;
+              const recaptchaResponse = grecaptcha.getResponse();
+  
+              if (!email || !password) {
+                  Swal.fire({
+                      icon: 'error',
+                      title: 'Error',
+                      text: 'Por favor, complete todos los campos.'
+                  });
+                  return false;
+              }
+  
+              if (recaptchaResponse.length === 0) {
+                  Swal.fire({
+                      icon: 'error',
+                      title: 'Error',
+                      text: 'Por favor, complete el reCAPTCHA.'
+                  });
+                  return false;
+              }
+  
+              Swal.fire({
+                  icon: 'success',
+                  title: 'Éxito',
+                  text: 'Formulario enviado correctamente.',
+                  showConfirmButton: false,
+                  timer: 1500
+              });
+  
+              return true;
+          }
+      </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+    
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
