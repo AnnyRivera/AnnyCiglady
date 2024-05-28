@@ -1,25 +1,55 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error</title>
-    <link rel="stylesheet" href="css/ss.css">
+    <title>Error 404 - Página no encontrada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFA500; /* Fondo naranja */
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 36px;
+            color: #ffffff; /* Texto blanco */
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        #errorMessage {
+            color: #ffffff; /* Texto blanco */
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Error</h1>
-        <p>Lo sentimos, ocurrió un error al procesar tu solicitud.</p>
-        <p>Vuelve atrás e inténtalo de nuevo más tarde.</p>
-        <img src="https://media.giphy.com/media/dxn6fRlTIShoeBr69N/giphy.gif" alt="Error Image">
-    </div>
-    <center><button type="button" class="btn btn-primary mt-3" onclick="validateForm()">Volver</button></center>
-<script>
-        function validateForm() {
-    window.location.href = 'login.html';
+    <h1>Error 404</h1>
+    <p id="errorMessage">Lo sentimos, la página que estás buscando no se encuentra.</p>
+
+    <!-- Espacio para insertar la imagen -->
+    <div id="imageContainer"></div>
+
+    <script>
+        // Verificar la URL actual
+        if (window.location.href !== 'URL_ESPERADA') {
+            document.getElementById('errorMessage').style.display = 'block';
         }
-</script>
+
+        // Crear un elemento de imagen
+        var image = document.createElement('img');
+
+        // Configurar los atributos de la imagen
+        image.src = 'images/error.jpg'; // Ruta de la imagen
+        image.alt = 'Mensaje de error';
+
+        // Obtener el contenedor donde se insertará la imagen
+        var container = document.getElementById('imageContainer');
+
+        // Agregar la imagen al contenedor
+        container.appendChild(image);
+    </script>
 </body>
 </html>
