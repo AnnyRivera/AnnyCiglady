@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <section class="contact_section layout_padding">
     <div class="container">
       <h2 class="font-weight-bold">
-        Contact Us
+        Contáctenos
       </h2>
       <div class="row">
         <div class="col-md-8 mr-auto">
@@ -53,8 +53,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <div class="mt-5">
                   <button type="submit">
-                    send
+                    Enviar
                   </button>
+                  <a href="principal.html" class="button" type="submit" >
+                    Volver
+</a>
                 </div>
               </div>
 

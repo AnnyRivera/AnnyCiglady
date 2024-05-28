@@ -4,10 +4,7 @@ const products = [
     { id: 3, name: 'Naranja', description: 'Naranjas jugosas', image: 'images/4.jpg', price: 20  },
     { id: 4, name: 'Fresa', description: 'Fresas frescas', image: 'images/5.jpg', price: 60  },
     { id: 5, name: 'Uvas', description: 'Uvas dulces', image: 'images/3.jpg', price: 40  },
-    { id: 6, name: 'Mango', description: 'Mangos dulces', image: 'images/6.jpg', price: 38  },
-    { id: 7, name: 'Zanahorias', description: 'Zanahorias frescas', image: 'images/zanahoria.jpg', price: 40  },
-    { id: 8, name: 'Tomates', description: 'Tomate fresco', image: 'images/tomate.jpg', price: 30  },
-    { id: 9, name: 'Verduras', description: 'Variedad de verduras frescas', image: 'images/verduras.jpg', price: 150  }
+    { id: 6, name: 'Mango', description: 'Mangos dulces', image: 'images/6.jpg', price: 38  }
 ];
 
 const cart = [];
@@ -24,7 +21,6 @@ function displayProducts() {
             <h3>${product.name}</h3>
             <p>${product.description}</p>
             <p>Precio: $${product.price}</p>
-            <button onclick="addToCart(${product.id})">Agregar a la cesta</button>
         `;
 
         productList.appendChild(productCard);
@@ -67,7 +63,6 @@ function searchProducts() {
             <h3>${product.name}</h3>
             <p>${product.description}</p>
             <p>Precio: $${product.price}</p>
-            <button onclick="addToCart(${product.id})">Agregar a la cesta</button>
         `;
 
         productList.appendChild(productCard);
@@ -133,8 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function logout() {
     // Aquí iría el código para cerrar la sesión, como redireccionar a la página de inicio de sesión o eliminar la información de la sesión.
     // Por ejemplo:
-    window.location.href = 'index.html'; // Si estás usando PHP para manejar la sesión.
+    window.location.href = 'index1.php'; // Si estás usando PHP para manejar la sesión.
     // localStorage.removeItem('token'); // Si estás usando localStorage.
     console.log("Sesión cerrada");
 }
-

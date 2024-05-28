@@ -1,32 +1,57 @@
+<?php
+require 'config.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    
+     $sql = "SELECT * FROM usuarios1 WHERE email = '$email'";
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {
+        $token = bin2hex(random_bytes(50)); 
+        $token_expiracion = date("Y-m-d H:i:s", strtotime('+1 hour')); 
+        
+        // $sql = "UPDATE Usuarios SET token_recuperacion = '$token', token_expiracion = '$token_expiracion' WHERE correo = '$correo'";
+        
+       
+
+            $to = $email;
+            $subject = "Recuperación de contraseña";
+            $message = "Haz clic en el siguiente enlace para restablecer tu contraseña: http://localhost:8081/email/restablecer_contrase%C3%B1a.php?";
+            $headers = "From: no-reply@tudominio.com\r\n";
+            
+            if (mail($to, $subject, $message, $headers)) {
+                echo "Correo de recuperación enviado.";
+            } else {
+                echo "Error al enviar el correo.";
+            }
+       
+    } else {
+        echo "El correo no está registrado.";
+    }
+    
+    $conn->close();
+}
+?>
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar Contraseña</title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="..css/bootstrap.min.css">
-        <link href="..css/responsive.css" rel="stylesheet" />
-    <!-- Style -->
-    <link rel="stylesheet" href="..css/ss.css">
-
+    <link rel="stylesheet" href="css/pp.css">
 </head>
 <body>
-    <h2>Recuperar Contraseña</h2>
-    <form action="recuperarpsw.php" method="POST">
-        <label for="email">Correo Electrónico:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        <button type="submit">Enviar Correo de Recuperación</button>
-    </form>
+    <div class="container">
+        <h2>Recuperar Contraseña</h2>
+        <form method="POST" action="recuperarpsw.php">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 </body>
 </html>
 
-<?  // Utilizamos la funcion mail de php para enviar el correo
-
-    (mail($emailcontacto, $asunto, $mensaje, $cabeceras));
-
-    echo "<div class='alert alert-success' role='alert'>
-             <b>Revisa tu bandeja de entrada<br> Te hemos enviado un email con tus datos de registro</b>
-         </div>";
-}
-?>

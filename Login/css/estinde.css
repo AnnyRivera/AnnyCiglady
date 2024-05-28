@@ -1,0 +1,54 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand {
+    color: #fc5d35 !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #000 !important;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: #fc5d35;
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+}
+
+footer h5 {
+    color: #fc5d35;
+}
+
+footer a {
+    color: #fc5d35;
+}
+
+footer a:hover {
+    color: #ff7f50;
+    text-decoration: underline;
+}
